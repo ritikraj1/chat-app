@@ -13,7 +13,7 @@ const io = socketio(server)
 const port = process.env.PORT || 3000
 const publicDirectoryPath = path.join(__dirname, '../public')
 
-app.use(express.static(publicDirectoryPath))
+app.use(express.static(publicDirectoryPath))    // registering public directory with express 
 
 io.on('connection', (socket) => {
     console.log('New WebSocket Connection!')
